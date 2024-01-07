@@ -25,7 +25,7 @@ const getCountries = async (req, res) => {
             return res.status(200).json(foundCountries)
         }
         foundCountries = await Country.findAll({ include: Activity })
-        return res.status(200).json(foundCountries)
+        return res.status(200).send("Funciona")
 
 
     } catch (error) {
